@@ -12,19 +12,16 @@ sigrok-test is a collection of various tools and files for testing sigrok.
 Status
 ------
 
-Work in progress.
-
-Distro packagers should NOT package this!
+For internal use only, distro packagers should NOT package this!
 
 
 Requirements
 ------------
 
  - git
- - gcc
+ - gcc / clang
  - make
- - autoconf >= 2.63
- - automake >= 1.11
+ - cmake >= 3.12
  - pkg-config >= 0.22
  - libglib >= 2.24.0
  - Python >= 3.2
@@ -44,12 +41,10 @@ In order to get the sigrok-test source code and build it, run:
 
  $ git clone git://sigrok.org/sigrok-test
  $ cd sigrok-test
- $ ./autogen.sh
- $ PKG_CONFIG_PATH=$HOME/sr/lib/pkgconfig ./configure \
-	--with-decodersdir=/path/to/decoders
+ $ PKG_CONFIG_PATH=$HOME/sr/lib/pkgconfig cmake .
  $ make
 
-This will test the decoders located at /path/to/decoders:
+This will test the decoders of the detected libsigrokdecode install:
 
  $ LD_LIBRARY_PATH=$HOME/sr/lib ./decoder/pdtest -r -v -a
 
@@ -124,5 +119,5 @@ You can find the sigrok developers in the #sigrok IRC channel on Freenode.
 Website
 -------
 
- http://sigrok.org
+ https://sigrok.org
 

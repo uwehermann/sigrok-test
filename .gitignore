@@ -1,29 +1,5 @@
-# autotools cruft
-/INSTALL
-/Makefile.in
-/aclocal.m4
-/autom4te.cache/
-/autostuff/
-/configure
-/configure.lineno
-
-# Editor/IDE cruft
-*.kate-swp
-*~
-/*.kdev4
-/Makefile.am.user
-
-# Configure/build cruft
-*.[ao]
-*.exe
-*.l[ao]
-.deps/
-.dirstamp
-.libs/
-/ChangeLog
-/Makefile
-/config.*
-/decoder/runtc
-/sigrok-test-*.tar.*
-__pycache__/
-stamp-h?
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+decoder/runtc
